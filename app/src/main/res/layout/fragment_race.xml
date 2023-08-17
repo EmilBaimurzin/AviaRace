@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background03">
+
+    <com.race.game.core.library.CustomImageButton
+        android:id="@+id/home"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_margin="5dp"
+        android:src="@drawable/home"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/level"
+        style="@style/BasicText"
+        android:layout_width="80dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="6dp"
+        android:background="@drawable/level"
+        android:paddingStart="30dp"
+        android:paddingBottom="2dp"
+        android:textColor="#0031BD"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="@+id/home"
+        app:layout_constraintStart_toEndOf="@+id/home"
+        app:layout_constraintTop_toTopOf="@+id/home"
+        tools:text="5" />
+
+    <TextView
+        android:id="@+id/balance"
+        style="@style/BasicText"
+        android:layout_width="80dp"
+        android:layout_height="30dp"
+        android:layout_margin="5dp"
+        android:background="@drawable/balance"
+        android:paddingEnd="15dp"
+        android:paddingBottom="3dp"
+        android:shadowColor="@android:color/transparent"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="12000" />
+
+    <TextView
+        tools:text="40/sec"
+        android:textSize="7sp"
+        android:id="@+id/speed"
+        android:shadowColor="@android:color/transparent"
+        style="@style/BasicText"
+        android:layout_marginTop="3dp"
+        android:layout_width="50dp"
+        android:layout_height="20dp"
+        android:background="@drawable/speed"
+        app:layout_constraintEnd_toEndOf="@+id/balance"
+        app:layout_constraintTop_toBottomOf="@+id/balance" />
+
+    <ImageView
+        android:id="@+id/track"
+        android:layout_width="340dp"
+        android:layout_height="655dp"
+        android:src="@drawable/track"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/level" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/gameRV"
+        android:layout_width="wrap_content"
+        android:layout_height="340dp"
+        android:layout_marginTop="150dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/track" />
+
+    <com.race.game.core.library.CustomImageButton
+        android:id="@+id/buy"
+        android:layout_width="60dp"
+        android:layout_height="30dp"
+        android:src="@drawable/buy"
+        android:layout_marginBottom="80dp"
+        app:layout_constraintBottom_toBottomOf="@+id/track"
+        app:layout_constraintEnd_toEndOf="@+id/track"
+        app:layout_constraintStart_toStartOf="@+id/track" />
+
+    <TextView
+        android:id="@+id/price"
+        style="@style/BasicText"
+        android:layout_width="0dp"
+        android:layout_height="22dp"
+        android:background="@drawable/balance"
+        android:paddingEnd="10dp"
+        android:paddingBottom="2dp"
+        android:shadowColor="@android:color/transparent"
+        android:textSize="9sp"
+        app:layout_constraintBottom_toTopOf="@+id/buy"
+        app:layout_constraintEnd_toEndOf="@+id/buy"
+        app:layout_constraintStart_toStartOf="@+id/buy"
+        tools:text="12000" />
+
+    <ImageView
+        android:id="@+id/placeImg"
+        android:layout_width="100dp"
+        android:alpha="0.4"
+        android:layout_marginStart="-10dp"
+        android:layout_height="100dp"
+        app:layout_constraintBottom_toBottomOf="@+id/track"
+        app:layout_constraintStart_toStartOf="@+id/track"
+        app:layout_constraintTop_toTopOf="@+id/track" />
+
+    <FrameLayout
+        android:id="@+id/planesLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
